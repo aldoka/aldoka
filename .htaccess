@@ -1,0 +1,14 @@
+AddDefaultCharset UTF-8
+
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l
+#[OR] RewriteCond %{REQUEST_FILENAME} -d
+AddType image/x-icon .ico
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^(public|css|fonts|img|js})\/(.*)$ /public/$1/$2 [NC,L]
+RewriteRule ^(.*)$ /public/index.php [NC,L]
+SetEnv APPLICATION_ENV "development"
+SetEnv ZF2_PATH "vendor/zendframework/zendframework/library"

@@ -1,11 +1,16 @@
 {
   "name" : "aldoka",
   "require" : {
-    "zendframework/zendframework" : "=2.2.5",
-    "zendframework/skeleton-application" : "dev-master"
+    "zendframework/zendframework" : ">=2.2.5",
+    "zendframework/skeleton-application" : "dev-master",
+    "zf-commons/zfc-base" : ">=v0.1.2",
+    "zf-commons/zfc-user" : ">=0.1.2"
   },
   "repositories" : [ {
     "type" : "composer",
     "url" : "https://packagist.org/"
+  }, {
+    "type" : "composer",
+    "url" : "https://packages.zendframework.com/"
   } ]
 }
